@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* locks background scroll when card is open */
+:root:has(.modal) {
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; /* always reserve vertical scrollbar */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.svelte-content {
+  display: contents;
+}
+
+.layout {
+  min-height: 100%;
+}
+
+b, strong {
+  font-weight: 800;
+}
