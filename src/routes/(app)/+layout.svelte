@@ -1,13 +1,17 @@
 <script lang="ts">
-  import "../../app.css"
-  import { page } from "$app/state"
-  import { fade } from "svelte/transition"
 </script>
 
-<div class="layout">
-  {#key page.url.pathname}
-    <div class="page-container" in:fade={{ duration: 150 }}>
-      <slot />
-    </div>
-  {/key}
-</div>
+<main>
+  <slot />
+</main>
+
+<style>
+main {
+  min-height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
